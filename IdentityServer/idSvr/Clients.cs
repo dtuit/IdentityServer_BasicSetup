@@ -19,7 +19,13 @@ namespace IdentityServer.idSvr
                     RedirectUris = new List<string>
                     {
                         "https://localhost:44300/", // self
-                        "http://localhost:21654/index.html"
+
+                        "http://localhost:21654/index.html",
+                        "http://localhost:11067/index.html",
+
+                        "http://localhost:23453/callback.html",
+                        "http://localhost:23453/popup.html",
+                        "http://localhost:23453/frame.html"
                     },
 
                     AllowAccessToAllScopes = true

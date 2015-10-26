@@ -3,7 +3,9 @@
   "private": true,
   "dependencies": {
     "angular": "1.4.7",
+    "angular-route": "1.4.7",
     "bootstrap": "3.3.5",
-    "bootswatch-dist": "3.3.0-yeti"
+    "bootswatch-dist": "3.3.0-yeti",
+    "oidc-token-manager": "0.2.0"
   }
 }

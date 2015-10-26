@@ -66,32 +66,102 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\Controllers\loginController.js" />
+    <Content Include="lib\oidc-token-manager\dist\oidc-token-manager.js" />
+    <Content Include="lib\oidc-token-manager\dist\oidc-token-manager.min.js" />
+    <Content Include="lib\oidc-token-manager\gulpfile.js" />
+    <Content Include="lib\oidc-token-manager\lib\defaultHttpRequest.js" />
+    <Content Include="lib\oidc-token-manager\lib\defaultPromiseFactory.js" />
+    <Content Include="lib\oidc-token-manager\lib\iife-end.js" />
+    <Content Include="lib\oidc-token-manager\lib\iife-start.js" />
+    <Content Include="lib\oidc-token-manager\oidc-token-manager.js" />
     <Content Include="packages.config" />
     <Content Include=".bowerrc" />
     <Content Include="bower.json" />
+    <Content Include="lib\oidc-token-manager\.bower.json" />
+    <Content Include="lib\oidc-token-manager\bower.json" />
+    <Content Include="lib\oidc-token-manager\LICENSE" />
+    <Content Include="lib\oidc-token-manager\package.json" />
+    <Content Include="lib\oidc-token-manager\README.md" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\app.js" />
+    <Content Include="app\Common\authorizer.js" />
+    <Content Include="app\Common\common.services.js" />
+    <Content Include="app\Common\tokenManager.js" />
+    <Content Include="app\Controllers\CallbackCtrl.js" />
+    <Content Include="app\Controllers\HomeCtrl.js" />
+    <Content Include="app\Views\frame.html" />
+    <Content Include="app\Views\home.html" />
+    <Content Include="app\Views\message.html" />
+    <Content Include="index.html" />
+    <Content Include="lib\angular-route\.bower.json" />
+    <Content Include="lib\angular-route\angular-route.js" />
+    <Content Include="lib\angular-route\angular-route.min.js" />
+    <Content Include="lib\angular-route\angular-route.min.js.map" />
+    <Content Include="lib\angular-route\bower.json" />
+    <Content Include="lib\angular-route\index.js" />
+    <Content Include="lib\angular-route\package.json" />
+    <Content Include="lib\angular-route\README.md" />
     <Content Include="lib\angular\.bower.json" />
+    <Content Include="lib\angular\angular-csp.css" />
+    <Content Include="lib\angular\angular.js" />
+    <Content Include="lib\angular\angular.min.js" />
     <Content Include="lib\angular\angular.min.js.gzip" />
     <Content Include="lib\angular\angular.min.js.map" />
     <Content Include="lib\angular\bower.json" />
+    <Content Include="lib\angular\index.js" />
     <Content Include="lib\angular\package.json" />
     <Content Include="lib\angular\README.md" />
     <Content Include="lib\bootstrap\.bower.json" />
     <Content Include="lib\bootstrap\bower.json" />
+    <Content Include="lib\bootstrap\dist\css\bootstrap-theme.css" />
     <Content Include="lib\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="lib\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="lib\bootstrap\dist\css\bootstrap.css" />
     <Content Include="lib\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="lib\bootstrap\dist\css\bootstrap.min.css" />
     <Content Include="lib\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="lib\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="lib\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="lib\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="lib\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="lib\bootstrap\dist\js\npm.js" />
     <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="lib\bootstrap\Gruntfile.js" />
     <Content Include="lib\bootstrap\grunt\.jshintrc" />
+    <Content Include="lib\bootstrap\grunt\bs-commonjs-generator.js" />
+    <Content Include="lib\bootstrap\grunt\bs-glyphicons-data-generator.js" />
+    <Content Include="lib\bootstrap\grunt\bs-lessdoc-parser.js" />
+    <Content Include="lib\bootstrap\grunt\bs-raw-files-generator.js" />
     <Content Include="lib\bootstrap\grunt\configBridge.json" />
     <Content Include="lib\bootstrap\grunt\sauce_browsers.yml" />
     <Content Include="lib\bootstrap\js\.jscsrc" />
     <Content Include="lib\bootstrap\js\.jshintrc" />
+    <Content Include="lib\bootstrap\js\affix.js" />
+    <Content Include="lib\bootstrap\js\alert.js" />
+    <Content Include="lib\bootstrap\js\button.js" />
+    <Content Include="lib\bootstrap\js\carousel.js" />
+    <Content Include="lib\bootstrap\js\collapse.js" />
+    <Content Include="lib\bootstrap\js\dropdown.js" />
+    <Content Include="lib\bootstrap\js\modal.js" />
+    <Content Include="lib\bootstrap\js\popover.js" />
+    <Content Include="lib\bootstrap\js\scrollspy.js" />
+    <Content Include="lib\bootstrap\js\tab.js" />
+    <Content Include="lib\bootstrap\js\tooltip.js" />
+    <Content Include="lib\bootstrap\js\transition.js" />
     <Content Include="lib\bootstrap\less\.csscomb.json" />
     <Content Include="lib\bootstrap\less\.csslintrc" />
     <Content Include="lib\bootstrap\less\alerts.less" />
@@ -166,65 +236,24 @@
     <Content Include="lib\bootstrap\less\variables.less" />
     <Content Include="lib\bootstrap\less\wells.less" />
     <Content Include="lib\bootstrap\LICENSE" />
+    <Content Include="lib\bootstrap\package.js" />
     <Content Include="lib\bootstrap\package.json" />
     <Content Include="lib\bootstrap\README.md" />
-    <Content Include="lib\jquery\.bower.json" />
-    <Content Include="lib\jquery\bower.json" />
-    <Content Include="lib\jquery\dist\jquery.min.map" />
-    <Content Include="lib\jquery\src\sizzle\dist\sizzle.min.map" />
     <Content Include="lib\bootswatch-dist\.bower.json" />
     <Content Include="lib\bootswatch-dist\bower.json" />
-    <Content Include="lib\bootswatch-dist\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="lib\bootswatch-dist\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="lib\bootswatch-dist\fonts\glyphicons-halflings-regular.woff" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="app\app.js" />
-    <Content Include="index.html" />
-    <Content Include="lib\angular\angular-csp.css" />
-    <Content Include="lib\angular\angular.js" />
-    <Content Include="lib\angular\angular.min.js" />
-    <Content Include="lib\angular\index.js" />
-    <Content Include="lib\bootstrap\dist\css\bootstrap-theme.css" />
-    <Content Include="lib\bootstrap\dist\css\bootstrap-theme.min.css" />
-    <Content Include="lib\bootstrap\dist\css\bootstrap.css" />
-    <Content Include="lib\bootstrap\dist\css\bootstrap.min.css" />
-    <Content Include="lib\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="lib\bootstrap\dist\js\bootstrap.js" />
-    <Content Include="lib\bootstrap\dist\js\bootstrap.min.js" />
-    <Content Include="lib\bootstrap\dist\js\npm.js" />
-    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="lib\bootstrap\Gruntfile.js" />
-    <Content Include="lib\bootstrap\grunt\bs-commonjs-generator.js" />
-    <Content Include="lib\bootstrap\grunt\bs-glyphicons-data-generator.js" />
-    <Content Include="lib\bootstrap\grunt\bs-lessdoc-parser.js" />
-    <Content Include="lib\bootstrap\grunt\bs-raw-files-generator.js" />
-    <Content Include="lib\bootstrap\js\affix.js" />
-    <Content Include="lib\bootstrap\js\alert.js" />
-    <Content Include="lib\bootstrap\js\button.js" />
-    <Content Include="lib\bootstrap\js\carousel.js" />
-    <Content Include="lib\bootstrap\js\collapse.js" />
-    <Content Include="lib\bootstrap\js\dropdown.js" />
-    <Content Include="lib\bootstrap\js\modal.js" />
-    <Content Include="lib\bootstrap\js\popover.js" />
-    <Content Include="lib\bootstrap\js\scrollspy.js" />
-    <Content Include="lib\bootstrap\js\tab.js" />
-    <Content Include="lib\bootstrap\js\tooltip.js" />
-    <Content Include="lib\bootstrap\js\transition.js" />
-    <Content Include="lib\bootstrap\package.js" />
     <Content Include="lib\bootswatch-dist\css\bootstrap.css" />
     <Content Include="lib\bootswatch-dist\css\bootstrap.min.css" />
+    <Content Include="lib\bootswatch-dist\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="lib\bootswatch-dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="lib\bootswatch-dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="lib\bootswatch-dist\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="lib\bootswatch-dist\js\bootstrap.js" />
     <Content Include="lib\bootswatch-dist\js\bootstrap.min.js" />
+    <Content Include="lib\jquery\.bower.json" />
+    <Content Include="lib\jquery\bower.json" />
     <Content Include="lib\jquery\dist\jquery.js" />
     <Content Include="lib\jquery\dist\jquery.min.js" />
+    <Content Include="lib\jquery\dist\jquery.min.map" />
     <Content Include="lib\jquery\MIT-LICENSE.txt" />
     <Content Include="lib\jquery\src\ajax.js" />
     <Content Include="lib\jquery\src\ajax\jsonp.js" />
@@ -293,6 +322,7 @@
     <Content Include="lib\jquery\src\serialize.js" />
     <Content Include="lib\jquery\src\sizzle\dist\sizzle.js" />
     <Content Include="lib\jquery\src\sizzle\dist\sizzle.min.js" />
+    <Content Include="lib\jquery\src\sizzle\dist\sizzle.min.map" />
     <Content Include="lib\jquery\src\traversing.js" />
     <Content Include="lib\jquery\src\traversing\findFilter.js" />
     <Content Include="lib\jquery\src\traversing\var\rneedsContext.js" />
@@ -314,6 +344,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

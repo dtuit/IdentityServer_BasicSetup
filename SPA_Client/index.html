@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css"/>
     <!--<link rel="stylesheet" href="lib/bootswatch-dist/css/bootstrap.css"/>-->
 </head>
-<body ng-app="app" ng-controller="appController">
+<body ng-app="app" >
 <!--<nav class="navbar navbar-default">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">{{title}}</a>
@@ -31,8 +31,12 @@
                     <li data-ng-hide="!authentication.isAuth"><a href="#/orders">My Orders</a></li>
                     <li data-ng-hide="!authentication.isAuth"><a href="#/refresh">Refresh Token</a></li>
                     <li data-ng-hide="!authentication.isAuth"><a href="" data-ng-click="logOut()">Logout</a></li>
-                    <li data-ng-hide="authentication.isAuth"> <a href="#/login">Login</a></li>
-                    <li data-ng-hide="authentication.isAuth"> <a href="#/signup">Sign Up</a></li>
+                    <!--<li data-ng-hide="authentication.isAuth"> <a href="#/login">Login</a></li>
+                    <li data-ng-hide="authentication.isAuth"> <a href="#/signup">Sign Up</a></li>-->
+                </ul>
+                <ul class="nav navbar-nav navbar-right" ng-controller="loginController as vm">
+                    <li ng-show="!vm.isAuthenticated()"><a ng-click="vm.login()" href>Login</a></li>
+                    <li ng-show="vm.isAuthenticated()"><a ng-click="vm.logout()" href>Logout ({{ vm.userName }})</a></li>
                 </ul>
             </div>
         </div>
@@ -74,9 +78,25 @@
         </div>
     </div>
 
+    <!-- Resources -->
+    <script src="lib/oidc-token-manager/dist/oidc-token-manager.js"></script>
+    <!-- AngularJS Resources -->
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <!-- AngularJS App-->
+    <script src="app/Common/common.services.js"></script>
+    <script src="app/Common/tokenManager.js"></script>
 
-<script src="lib/angular/angular.js"></script>
-<script src="app/app.js"></script>
+    <script src="app/Common/authorizer.js"></script>
+   
+    <script src="app/app.js"></script>
+    <!-- Services -->
+
+    <!-- Controllers -->
+    <script src="app/Controllers/CallbackCtrl.js"></script>
+    <script src="app/Controllers/HomeCtrl.js"></script>
+    <script src="app/Controllers/loginController.js"></script>
+
 
 </body>
 </html>
