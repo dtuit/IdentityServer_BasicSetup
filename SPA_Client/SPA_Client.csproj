@@ -66,6 +66,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\Common\ngOidcTokenManager.utils.js" />
+    <Content Include="app\Common\ngOidcTokenManager.js" />
     <Content Include="app\Controllers\loginController.js" />
     <Content Include="lib\oidc-token-manager\dist\oidc-token-manager.js" />
     <Content Include="lib\oidc-token-manager\dist\oidc-token-manager.min.js" />

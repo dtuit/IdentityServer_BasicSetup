@@ -22,6 +22,8 @@ namespace IdentityServer.idSvr
 
                         "http://localhost:21654/index.html",
                         "http://localhost:11067/index.html",
+                        "http://localhost:11067/#/callback/",
+
 
                         "http://localhost:23453/callback.html",
                         "http://localhost:23453/popup.html",

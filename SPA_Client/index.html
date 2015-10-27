@@ -78,7 +78,9 @@
         </div>
     </div>
 
-    <!-- Resources -->
+    <script id="OidcModel" type="application/json">{"PathBase":"/idm","ShowLoginButton":null,"authConfig":{"authorization_endpoint":"/idm/authorize","client_id":"idmgr"}}</script>
+
+<!-- Resources -->
     <script src="lib/oidc-token-manager/dist/oidc-token-manager.js"></script>
     <!-- AngularJS Resources -->
     <script src="lib/angular/angular.js"></script>
@@ -87,13 +89,16 @@
     <script src="app/Common/common.services.js"></script>
     <script src="app/Common/tokenManager.js"></script>
 
+    <script src="app/Common/ngOidcTokenManager.js"></script>
+    <script src="app/Common/ngOidcTokenManager.utils.js"></script>
+
     <script src="app/Common/authorizer.js"></script>
    
     <script src="app/app.js"></script>
     <!-- Services -->
 
     <!-- Controllers -->
-    <script src="app/Controllers/CallbackCtrl.js"></script>
+    <!--<script src="app/Controllers/CallbackCtrl.js"></script>-->
     <script src="app/Controllers/HomeCtrl.js"></script>
     <script src="app/Controllers/loginController.js"></script>
 

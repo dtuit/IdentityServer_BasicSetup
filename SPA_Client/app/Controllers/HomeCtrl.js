@@ -1,5 +1,10 @@
-﻿app.controller("HomeCtrl", ['$scope', homeCtrl]);
-
-function homeCtrl($scope) {
+﻿app.controller("HomeCtrl", ['$scope', 'ngTokenManager', '$http', homeCtrl]);
+    
+function homeCtrl($scope, ngTokenManager, $http) {
     $scope.title = "Home";
+    window.tokenManagerProvider = ngTokenManager;
+
+    $scope.login = function() {
+        ngTokenManager.redirectForToken();
+    }
 }
