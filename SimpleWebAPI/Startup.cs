@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using IdentityServer3.AccessTokenValidation;
 using Microsoft.Owin;
 using Owin;
@@ -28,12 +29,12 @@ namespace SimpleWebApi
             var config = new HttpConfiguration();
             config.MapHttpAttributeRoutes();
 
-            //config.EnableCors(
-            //    new EnableCorsAttribute(
-            //        "https://localhost:44300",
-            //        "accept, authorization",
-            //        "GET", 
-            //        "WWW-Authenticate"));
+            config.EnableCors(
+                new EnableCorsAttribute(
+                    "http://localhost:11067",
+                    "accept, authorization",
+                    "GET",
+                    "WWW-Authenticate"));
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

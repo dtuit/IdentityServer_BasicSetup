@@ -1,1 +1,43 @@
-﻿<h1>tokens.html</h1>
+﻿<h1>tokens </h1>
+<p>A basic view into the angualr odic-token-manager</p>
+<div class="row">
+    <ul class="list-unstyled list-inline"></ul>
+</div>
+
+
+<div class="row">
+    <ul class="list-unstyled list-inline">
+        <li><button class="btn btn-default" ng-click="removeToken()">Remove Access Token</button></li>
+        <li><button class="btn btn-primary" ng-click="callIdentityApi()">CalApi(all users claims)</button></li>
+
+    </ul>
+</div>
+
+<div class="row">
+    <div class="col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">ID Token Contents</div>
+            <div class="panel-body">
+                <pre id="id-token">{{id_token_display()}}</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">Access Token</div>
+            <div class="panel-body">
+                <pre id="access-token">{{access_token_display()}}</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">Ajax Result</div>
+            <div class="panel-body">
+                <pre id="ajax-result">{{apiResult}}</pre>
+            </div>
+        </div>
+    </div>
+</div>

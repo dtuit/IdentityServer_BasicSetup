@@ -8,30 +8,34 @@ ServerSide:
 Client:
 AngularJS, [oidc-token-manager](https://github.com/IdentityModel/oidc-token-manager)
 
-##How To
+#### How To Set Up
 
 Enable SSL on all projects and set as the Project Url.
 
-##Dependencys
 
-###ASP Identity.
+#### ASP Identity.
 
-`Install-Package Microsoft.AspNet.Identity.EntityFramework`
-`install-package IdentityServer3`
+```
+Install-Package Microsoft.AspNet.Identity.EntityFramework
+install-package IdentityServer3
+```
 
-###IdentityServer
+#### IdentityServer and IdentityManager
 
-`install-package Microsoft.Owin.Host.Systemweb`
+```
+install-package Microsoft.Owin.Host.Systemweb
 
-`install-package IdentityServer3`
-`install-package IdentityServer3.AspNetIdentity`
+install-package IdentityServer3
+install-package IdentityServer3.AspNetIdentity
 
-`install-package IdentityManager -Pre`
-`install-package IdentityManager.AspNetIdentity -Pre`
+install-package IdentityManager -Pre
+install-package IdentityManager.AspNetIdentity -Pre
 
-`install-package Microsoft.Owin.Security.Google`
+install-package Microsoft.Owin.Security.Google
+```
 
-add project reference to `ASPIdentity`
+add project reference to `ASPIdentity
+
 
 add to web.config
 ```xml
@@ -40,9 +44,11 @@ add to web.config
 </system.webServer>
 ```
 
-###SimpleWebApi
+#### Web API
 
-'Install-Package Microsoft.AspNet.WebApi.Owin'
-`Install-Package Microsoft.AspNet.WebApi.Cors`
-'Install-Package Microsoft.Owin.Host.Systemweb'
-`Install-Package IdentityServer3.AccessTokenValidation`
+```
+Install-Package Microsoft.AspNet.WebApi.Owin
+Install-Package Microsoft.AspNet.WebApi.Cors
+Install-Package Microsoft.Owin.Host.Systemweb
+Install-Package IdentityServer3.AccessTokenValidation
+```

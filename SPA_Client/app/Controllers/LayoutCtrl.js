@@ -1,9 +1,12 @@
 ﻿angular.module('app')
     .controller('LayoutCtrl', _layoutCtrl);
 
-_layoutCtrl.$inject = ['$rootScope', '$location', '$window', 'ngTokenManager', 'tmErrorService'];
-function _layoutCtrl($rootScope, $location, $window, ngTokenManager, tmErrorService) {
+_layoutCtrl.$inject = ['$rootScope', '$location', '$window', 'ngTokenManager2', 'tmErrorService', 'tmAuthorizer'];
+function _layoutCtrl($rootScope, $location, $window, ngTokenManager, tmErrorService, tmAuthorizer) {
     $rootScope.layout = {};
+
+    $rootScope.isAuthenticated = tmAuthorizer.isAuthenticated;
+    $rootScope.isAuthorized = tmAuthorizer.isAuthorized;
 
     function removed() {
         tmErrorService.clear();

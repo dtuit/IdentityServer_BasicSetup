@@ -4,7 +4,7 @@
     .constant('tmAuthIntercept', _basicAuthIntercept)
     .factory('tmAuthorizer', _tmAuthorizer);
 
-_basicAuthIntercept.$inject = ['$q', 'ngTokenManager', 'tmErrorService'];
+_basicAuthIntercept.$inject = ['$q', 'ngTokenManager2', 'tmErrorService'];
 function _basicAuthIntercept($q, ngTokenManager, tmErrorService) {
     return {
         'request': function (config) {
@@ -48,7 +48,7 @@ function _tmErrorService($rootScope, $timeout) {
     return svc;
 }
 
-_tmCallbackCtrl.$inject = ['ngTokenManager', 'tmErrorService', '$routeParams', '$rootScope', '$location'];
+_tmCallbackCtrl.$inject = ['ngTokenManager2', 'tmErrorService', '$routeParams', '$rootScope', '$location'];
 function _tmCallbackCtrl(ngTokenManager, tmErrorService, $routeParams, $rootScope, $location) {
     console.log("callbackCtrl");
     var hash = $routeParams.response;
@@ -62,7 +62,7 @@ function _tmCallbackCtrl(ngTokenManager, tmErrorService, $routeParams, $rootScop
     });
 };
 
-_tmAuthorizer.$inject = ['ngTokenManager'];
+_tmAuthorizer.$inject = ['ngTokenManager2'];
 function _tmAuthorizer(ngTokenManager) {
     var svc = {
         isAuthenticated: function() {
