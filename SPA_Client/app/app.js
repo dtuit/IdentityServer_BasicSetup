@@ -1,7 +1,7 @@
 ﻿
     'use strict';
 
-    var app = angular.module('app', ['ngRoute', "common.services", "ngOidcTokenManager", "ngOidcTokenManager.utils"]);
+    var app = angular.module('app', ['ngRoute', "ngOidcTokenManager", "ngOidcTokenManager.utils"]);
 
     app.config(
         ['$routeProvider', 'ngTokenManagerProvider', '$httpProvider', 
@@ -20,18 +20,22 @@
                 })
                 .when("/error", {
                     templateUrl: '/app/Views/message.html'
+                })
+                .when('/tokens', {
+                    templateUrl: '/app/Views/tokens.html',
+                    controller: 'TokensCtrl'
+                })
+                .otherwise({
+                    redirectTo: '/'
                 });
-            //.otherwise({
-            //    redirectTo: '/'
-            //});
 
         var config = {
             client_id: "implicitclient",
             authority: "https://localhost:44300/idsvr",
             redirect_uri: window.location.protocol + "//" + window.location.host + "/#/callback/",
             post_logout_redirect_uri: window.location.protocol + "//" + window.location.host + "/index.html",
-            response_type: "token",
-            scope: "read write",
+            response_type: "id_token token",
+            scope: "openid profile read write"
             //silent_redirect_uri: window.location.protocol + "//" + window.location.host + $browser.baseHref() + "app/Views/frame.html",
             //silent_renew: true
         };
@@ -41,7 +45,3 @@
         //$httpProvider.interceptors.push(tokenIntercept);
 
     }]);
-
-    //app.controller('appController', ['$scope', function ($scope) {
-    //    $scope.title = 'angularJS IdentityServer app';
-    //}]);

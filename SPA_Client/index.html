@@ -6,41 +6,10 @@
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css"/>
     <!--<link rel="stylesheet" href="lib/bootswatch-dist/css/bootstrap.css"/>-->
 </head>
-<body ng-app="app" >
-<!--<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">{{title}}</a>
+<body ng-app="app" ng-controller="LayoutCtrl">
+    
+    <div ng-include="'/app/Views/navbar.html'"></div>
 
-        <button type="button" class="btn btn-default navbar-btn">Sign in</button>
-        <button type="button" class="btn btn-default navbar-btn">Sign Out</button>
-
-    </div>
-</nav>-->
-
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button class="btn btn-success navbar-toggle" data-ng-click="navbarExpanded = !navbarExpanded">
-                    <span class="glyphicon glyphicon-chevron-down"></span>
-                </button>
-                <a class="navbar-brand" href="#/">Home</a>
-            </div>
-            <div class="collapse navbar-collapse" data-collapse="!navbarExpanded">
-                <ul class="nav navbar-nav navbar-right">
-                    <li data-ng-hide="!authentication.isAuth"><a href="#">Welcome {{authentication.userName}}</a></li>
-                    <li data-ng-hide="!authentication.isAuth"><a href="#/orders">My Orders</a></li>
-                    <li data-ng-hide="!authentication.isAuth"><a href="#/refresh">Refresh Token</a></li>
-                    <li data-ng-hide="!authentication.isAuth"><a href="" data-ng-click="logOut()">Logout</a></li>
-                    <!--<li data-ng-hide="authentication.isAuth"> <a href="#/login">Login</a></li>
-                    <li data-ng-hide="authentication.isAuth"> <a href="#/signup">Sign Up</a></li>-->
-                </ul>
-                <ul class="nav navbar-nav navbar-right" ng-controller="loginController as vm">
-                    <li ng-show="!vm.isAuthenticated()"><a ng-click="vm.login()" href>Login</a></li>
-                    <li ng-show="vm.isAuthenticated()"><a ng-click="vm.logout()" href>Logout ({{ vm.userName }})</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
     <div class="jumbotron">
         <div class="container">
             <div class="page-header text-center">
@@ -69,10 +38,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <p class="text-muted">Created by Taiseer Joudeh. Twitter: <a target="_blank" href="http://twitter.com/tjoudeh">@tjoudeh</a></p>
-                </div>
-                <div class="col-md-6">
-                    <p class="text-muted">Taiseer Joudeh Blog: <a target="_blank" href="http://bitoftech.net">bitoftech.net</a></p>
+                    <p class="text-muted">By Darren Tuit : <a target="_blank" href="http://www.github.com/dtuit">github.com/dtuit</a></p>
                 </div>
             </div>
         </div>
@@ -86,21 +52,18 @@
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular-route/angular-route.js"></script>
     <!-- AngularJS App-->
-    <script src="app/Common/common.services.js"></script>
-    <script src="app/Common/tokenManager.js"></script>
 
-    <script src="app/Common/ngOidcTokenManager.js"></script>
-    <script src="app/Common/ngOidcTokenManager.utils.js"></script>
-
-    <script src="app/Common/authorizer.js"></script>
+    <script src="app/ngOidcTokenManager/ngOidcTokenManager.js"></script>
+    <script src="app/ngOidcTokenManager/ngOidcTokenManager.utils.js"></script>
    
     <script src="app/app.js"></script>
     <!-- Services -->
 
     <!-- Controllers -->
-    <!--<script src="app/Controllers/CallbackCtrl.js"></script>-->
     <script src="app/Controllers/HomeCtrl.js"></script>
-    <script src="app/Controllers/loginController.js"></script>
+    <script src="app/Controllers/LoginCtrl.js"></script>
+    <script src="app/Controllers/NavigationCtrl.js"></script>
+    <script src="app/Controllers/LayoutCtrl.js"></script>
 
 
 </body>

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using IdentityServer3.Core;
 using IdentityServer3.Core.Models;
 
 namespace IdentityServer.idSvr
@@ -12,7 +13,7 @@ namespace IdentityServer.idSvr
                 new Client
                 {
                     Enabled = true,
-                    ClientName = "Basic Client Implicit",
+                    ClientName = "Implicit Client",
                     ClientId = "implicitclient",
                     Flow = Flows.Implicit,
 
@@ -30,8 +31,21 @@ namespace IdentityServer.idSvr
                         "http://localhost:23453/frame.html"
                     },
 
-                    AllowAccessToAllScopes = true
+                    AllowedScopes = new List<string>
+                    {
+                        Constants.StandardScopes.OpenId,
+                        Constants.StandardScopes.Profile,
+                        Constants.StandardScopes.Email,
+                        "read",
+                        "write"
+                    },
                 }
+                
+                //new Client
+                //{
+                //    Enabled = true,
+                //    ClientName = "Authorization Client"
+                //}
             };
         }
     }

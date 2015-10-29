@@ -1,0 +1,39 @@
+﻿
+<!--<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="btn btn-success navbar-toggle" data-ng-click="navbarExpanded = !navbarExpanded">
+                <span class="glyphicon glyphicon-chevron-down"></span>
+            </button>
+            <a class="navbar-brand" href="#/">Home</a>
+        </div>
+
+        <div class="collapse navbar-collapse" data-collapse="!navbarExpanded" ng-controller='navigationCtrl as vm'>
+            <ul class="nav navbar-nav navbar-left">
+                <li ng-show="vm.isAuthorized()"><a href="#/orders">My Orders</a></li>
+                <li ng-show="vm.isAuthorized()"><a href="#/tokens">Tokens</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right" ng-controller="loginCtrl as vm">
+                <li ng-show="!vm.isAuthenticated()"><a>Sign Up</a></li>
+                <li ng-show="!vm.isAuthenticated()"><a ng-click="vm.login()" href="">Login</a></li>
+                <li ng-show="vm.isAuthenticated()"><a ng-click="vm.logout()" href="">Logout ({{ vm.userName }})</a></li>
+            </ul>
+        </div>
+    </div>
+</div>-->
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-header">
+        <a href="#/" class="navbar-brand">
+            AngularJS Client
+        </a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li ng-show="true"><a href="#/tokens" idm-prevent-default>Tokens</a></li>
+        <li ng-show="layout.showLogin"><a href="#/" ng-click="login()" idm-prevent-default>Login</a></li>
+        <li ng-show="layout.showLogout"><a href="#/" ng-click="logout()" idm-prevent-default>Logout</a></li>
+    </ul>
+
+    <span class="navbar-text pull-right">{{layout.username}}</span>
+</div>

@@ -66,9 +66,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\Common\ngOidcTokenManager.utils.js" />
-    <Content Include="app\Common\ngOidcTokenManager.js" />
-    <Content Include="app\Controllers\loginController.js" />
+    <Content Include="app\Controllers\LayoutCtrl.js" />
+    <Content Include="app\Controllers\NavigationCtrl.js" />
+    <Content Include="app\Controllers\TokensCtrl.js" />
+    <Content Include="app\ngOidcTokenManager\ngOidcTokenManager.utils.js" />
+    <Content Include="app\ngOidcTokenManager\ngOidcTokenManager.js" />
+    <Content Include="app\Controllers\LoginCtrl.js" />
+    <Content Include="app\Views\navbar.html" />
+    <Content Include="app\Views\tokens.html" />
     <Content Include="lib\oidc-token-manager\dist\oidc-token-manager.js" />
     <Content Include="lib\oidc-token-manager\dist\oidc-token-manager.min.js" />
     <Content Include="lib\oidc-token-manager\gulpfile.js" />
@@ -94,10 +99,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
-    <Content Include="app\Common\authorizer.js" />
-    <Content Include="app\Common\common.services.js" />
-    <Content Include="app\Common\tokenManager.js" />
-    <Content Include="app\Controllers\CallbackCtrl.js" />
     <Content Include="app\Controllers\HomeCtrl.js" />
     <Content Include="app\Views\frame.html" />
     <Content Include="app\Views\home.html" />
